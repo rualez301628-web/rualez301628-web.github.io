@@ -1,0 +1,28 @@
+{
+  "name": "rualez301628-web.github.io",
+  "version": "1.0.0",
+  "homepage": "https://github.com/rualez301628-web/rualez301628-web.github.io#readme",
+  "author": {
+    "email": "rualez301628@gmail.com",
+    "name": "Juan Ruales",
+    "url": "https://rualez301628-web.github.io"
+  },
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rualez301628-web/rualez301628-web.github.io.git"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/rualez301628-web/rualez301628-web.github.io/issues"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}
