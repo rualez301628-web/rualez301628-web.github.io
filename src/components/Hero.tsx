@@ -9,7 +9,7 @@ export function Hero() {
       setActiveImageIndex((currentIndex) =>
         currentIndex === heroImages.length - 1 ? 0 : currentIndex + 1,
       );
-    }, 2500);
+    }, 4500);
 
     return () => window.clearInterval(intervalId);
   }, []);

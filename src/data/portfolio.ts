@@ -15,8 +15,11 @@ export type ExperienceItem = {
 }
 
 export const heroImages = [
-  "/home/Frame1.jpg",
-  "/home/Frame2.png",
+  "/home/Frame1.jpeg",
+  "/home/Frame2.jpeg",
+  "/home/Frame3.jpeg",
+  "/home/Frame4.jpeg",
+  "/home/Frame5.jpeg",
 ];
 
 export const profile = {
