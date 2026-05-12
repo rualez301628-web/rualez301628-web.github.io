@@ -7,7 +7,7 @@ type LayoutProps = {
 
 export function Layout({ children }: LayoutProps) {
   return (
-    <div className="relative mx-auto flex min-h-svh w-full max-w-[1126px] flex-col border-x border-[var(--border)] bg-[var(--bg)]/80">
+    <div className="relative mx-auto flex min-h-svh w-full max-w-281.5 flex-col border-x border-(--border) bg-(--bg)/80">
       <Header />
 
       <main className="flex-1 px-5 pt-28 sm:px-8 lg:px-12">{children}</main>
@@ -20,10 +20,10 @@ export function Layout({ children }: LayoutProps) {
 function Header() {
   return (
     <header className="fixed left-0 right-0 top-4 z-50 px-4">
-      <nav className="soft-card mx-auto flex max-w-[760px] items-center justify-between rounded-full px-4 py-3">
+      <nav className="soft-card mx-auto flex max-w-190 items-center justify-between rounded-full px-4 py-3">
         <a
           href="#home"
-          className="text-sm font-semibold tracking-tight text-[var(--text-h)]">
+          className="text-sm font-semibold tracking-tight text-(--text-h)">
           Juan Ruales
         </a>
 
@@ -40,7 +40,7 @@ function Header() {
         </div>
 
         <a
-          className="btn btn-sm rounded-full border-0 bg-[var(--accent)] text-white hover:bg-[var(--accent)]/85"
+          className="btn btn-sm rounded-full border-0 bg-(--accent) text-white hover:bg-(--accent)/85"
           href={`mailto:${profile.email}`}>
           Escribir
         </a>
@@ -53,7 +53,7 @@ function Footer() {
   return (
     <footer
       id="contact"
-      className="border-t border-[var(--border)] px-5 py-10 sm:px-8 lg:px-12">
+      className="border-t border-(--border) px-5 py-10 sm:px-8 lg:px-12">
       <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
         <div>
           <p className="text-sm accent-text">
@@ -92,7 +92,7 @@ function Footer() {
         </div>
       </div>
 
-      <div className="mt-8 flex flex-col gap-2 border-t border-[var(--border)] pt-6 text-sm text-[var(--text)] sm:flex-row sm:justify-between">
+      <div className="mt-8 flex flex-col gap-2 border-t border-(--border) pt-6 text-sm text-(--text) sm:flex-row sm:justify-between">
         <p>© {new Date().getFullYear()} Juan David Ruales Delgado.</p>
         <p>Render 3D · Videojuegos · Desarrollo Web</p>
       </div>

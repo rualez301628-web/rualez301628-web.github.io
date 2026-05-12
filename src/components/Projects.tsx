@@ -38,7 +38,7 @@ function ProjectCard({ project }: { project: Project }) {
           className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
         />
 
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/10 to-transparent" />
 
         <div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-5">
           <span className="px-4 py-2 badge border-0 bg-(--bg) text-(--text-h)">
