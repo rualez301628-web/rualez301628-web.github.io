@@ -9,13 +9,13 @@ export function Projects() {
             Proyectos
           </p>
           <h2 className="section-title mt-3 text-4xl">
-            Render, juego y software.
+            Renders, juegos y software.
           </h2>
         </div>
-        <p className="max-w-xl text-sm leading-6">
+        {/* <p className="max-w-xl text-sm leading-6">
           Una base simple para mostrar trabajos. En escritorio usa 2 columnas;
           en móvil cae a 1 columna.
-        </p>
+        </p> */}
       </div>
 
       <div className="grid gap-5 md:grid-cols-2">
@@ -30,12 +30,21 @@ export function Projects() {
 function ProjectCard({ project }: { project: Project }) {
   const content = (
     <article className="soft-card group h-full rounded-3xl p-6 transition duration-300 hover:-translate-y-1">
-      <div className="mb-6 aspect-16/10 overflow-hidden rounded-[1.2rem] border border-(--border) accent-bg">
-        <div className="flex h-full items-end justify-between p-5">
+      <div className="relative mb-6 aspect-16/10 overflow-hidden rounded-[1.2rem] border border-(--border) accent-bg">
+        <img
+          src={project.image}
+          alt={project.title}
+          loading="lazy"
+          className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
+        />
+
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+
+        <div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-5">
           <span className="px-4 py-2 badge border-0 bg-(--bg) text-(--text-h)">
             {project.category}
           </span>
-          <span className="text-4xl font-black text-(--accent)">↗</span>
+          <span className="text-4xl font-black text-white">↗</span>
         </div>
       </div>
 

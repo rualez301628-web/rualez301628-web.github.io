@@ -2,6 +2,7 @@ export type Project = {
   title: string
   category: string
   description: string
+  image: string
   stack: string[]
   href?: string
 }
@@ -13,6 +14,11 @@ export type ExperienceItem = {
   description: string
 }
 
+export const heroImages = [
+  "/home/Frame1.jpg",
+  "/home/Frame2.png",
+];
+
 export const profile = {
   name: 'Juan David Ruales Delgado',
   role: '3D Artist, Game Developer & Web Developer',
@@ -20,40 +26,21 @@ export const profile = {
   email: 'Rualez301628@gmail.com',
   linkedin: 'https://www.linkedin.com/in/juan-david-ruales-583296220/',
   itch: 'https://sldavid.itch.io/bladesouls',
+  instagram: "https://www.instagram.com/artist3dcolombia/",
   summary:
-    'Tecnólogo en análisis y desarrollo de sistemas de información, estudiante de Ingeniería de Sistemas y creador autodidacta enfocado en renders 3D, videojuegos y desarrollo web.',
+    'Ingeniero de Sistemas y creador autodidacta enfocado en renders 3D, videojuegos y desarrollo web.',
 }
 
 export const projects: Project[] = [
-  {
-    title: 'Renders 3D en Blender',
-    category: 'Visualización 3D',
-    description:
-      'Composiciones visuales para presentar modelos, productos o escenas con una estética limpia, buena iluminación y enfoque comercial.',
-    stack: ['Blender', 'Modelado 3D', 'Lighting', 'Rendering'],
-  },
   {
     title: 'BladeSouls',
     category: 'Videojuego',
     description:
       'Proyecto de videojuego publicado en itch.io, orientado a combate, mundos 3D y experimentación con motores gráficos.',
-    stack: ['Unreal Engine 5', 'Blueprints', 'Game Design'],
+    image: '/projects/bNSoen.jpeg',
+    stack: [ 'Unreal Engine 5', 'Blueprints', 'Game Design' ],
     href: 'https://sldavid.itch.io/bladesouls',
-  },
-  {
-    title: 'Videojuego 3D multiplataforma',
-    category: 'Unity3D',
-    description:
-      'Desarrollo de videojuego 3D con físicas, exportación a Android, iOS, PC y WebGL, integrando lógica de juego con C#.',
-    stack: ['Unity3D', 'C#', 'WebGL', 'Mobile'],
-  },
-  {
-    title: 'Sistema de inventario',
-    category: 'Desarrollo Web',
-    description:
-      'Aplicativo web para control de entrada y salida de equipos, roles, permisos y administración de inventario empresarial.',
-    stack: ['Laravel', 'Alpine.js', 'TailwindCSS'],
-  },
+  }
 ]
 
 export const experience: ExperienceItem[] = [

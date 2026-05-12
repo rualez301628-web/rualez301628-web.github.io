@@ -8,7 +8,25 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  preview: {
+    allowedHosts: [
+      "*",
+      "hp15da0011la",
+      "hp15da0011la.local"
+    ],
+    host: '0.0.0.0',
+    cors: true,
+    port: 4173,
+  },
   server: {
-    allowedHosts: [ 'hp15da0011la.local' ]
-  }
+    allowedHosts: [
+      "*",
+      "hp15da0011la",
+      "hp15da0011la.local"
+    ],
+    watch: { usePolling: true },
+    host: '0.0.0.0',
+    cors: true,
+    port: 5173,
+  },
 })

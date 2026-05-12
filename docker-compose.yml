@@ -9,6 +9,6 @@ services:
     volumes:
       - ./:/app
     ports:
-      - 2173:2173
-      - 3173:3173
+      - 5173:5173
+      - 4173:4173
     tty: true

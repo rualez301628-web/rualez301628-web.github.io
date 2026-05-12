@@ -24,11 +24,7 @@ export function Skills() {
             ))}
           </div>
 
-          <p className="mt-6 leading-8">
-            Perfil híbrido: puede moverse entre arte 3D, lógica de videojuegos y
-            desarrollo web. La landing queda lista para reemplazar las tarjetas
-            por renders reales cuando los tenga exportados.
-          </p>
+          <p className="mt-6 leading-8"></p>
         </div>
       </div>
     </section>

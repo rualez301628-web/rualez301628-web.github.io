@@ -1,6 +1,19 @@
-import { profile } from "../data/portfolio";
+import { useEffect, useState } from "react";
+import { heroImages, profile } from "../data/portfolio";
 
 export function Hero() {
+  const [activeImageIndex, setActiveImageIndex] = useState(0);
+
+  useEffect(() => {
+    const intervalId = window.setInterval(() => {
+      setActiveImageIndex((currentIndex) =>
+        currentIndex === heroImages.length - 1 ? 0 : currentIndex + 1,
+      );
+    }, 2500);
+
+    return () => window.clearInterval(intervalId);
+  }, []);
+
   return (
     <section
       id="home"
@@ -31,20 +44,18 @@ export function Hero() {
       </div>
 
       <div className="soft-card relative overflow-hidden rounded-4xl p-5">
-        <div className="aspect-square rounded-3xl border border-(--border) accent-bg p-6">
-          <div className="grid h-full place-items-center rounded-[1.2rem] border border-(--accent-border) bg-(--bg)/70">
-            <div className="text-center">
-              <p className="accent-text text-sm font-semibold uppercase tracking-[0.35em]">
-                Portfolio
-              </p>
-              <p className="mt-4 text-4xl font-black tracking-tight text-(--text-h)">
-                3D / Web
-              </p>
-              <p className="mx-auto mt-4 max-w-60 text-sm leading-6">
-                Espacio preparado para reemplazar por renders reales, mockups o
-                capturas de proyectos.
-              </p>
-            </div>
+        <div className="aspect-square overflow-hidden rounded-3xl border border-(--border) accent-bg p-4">
+          <div className="relative flex h-full items-center justify-center overflow-hidden rounded-[1.2rem] border border-(--accent-border) bg-(--bg)/70">
+            {heroImages.map((image, index) => (
+              <img
+                key={image}
+                src={image}
+                alt={`Render destacado ${index + 1}`}
+                className={`absolute h-full w-auto max-w-none object-contain transition-opacity duration-700 ${
+                  index === activeImageIndex ? "opacity-100" : "opacity-0"
+                }`}
+              />
+            ))}
           </div>
         </div>
       </div>
